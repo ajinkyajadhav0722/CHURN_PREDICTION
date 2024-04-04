@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Churn Prediction</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <form action="/" method="POST">
+            <div class="col-sm-9">
+                <div class="form-group purple-border">
+                    <label for="query1">SeniorCitizen:</label>
+                    <input class="form-control" type="text" id="query1" name="query1" autofocus>
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query2">MonthlyCharges:</label>
+                    <input class="form-control" type="text" id="query2" name="query2">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query3">TotalCharges:</label>
+                    <input class="form-control" type="text" id="query3" name="query3">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query4">gender:</label>
+                    <input class="form-control" type="text" id="query4" name="query4">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query5">Partner:</label>
+                    <input class="form-control" type="text" id="query5" name="query5">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query6">Dependents:</label>
+                    <input class="form-control" type="text" id="query6" name="query6">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query7">PhoneService:</label>
+                    <input class="form-control" type="text" id="query7" name="query7">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query8">MultipleLines:</label>
+                    <input class="form-control" type="text" id="query8" name="query8">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query9">InternetService:</label>
+                    <input class="form-control" type="text" id="query9" name="query9">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query10">OnlineSecurity:</label>
+                    <input class="form-control" type="text" id="query10" name="query10">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query11">OnlineBackup:</label>
+                    <input class="form-control" type="text" id="query11" name="query11">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query12">DeviceProtection:</label>
+                    <input class="form-control" type="text" id="query12" name="query12">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query13">TechSupport:</label>
+                    <input class="form-control" type="text" id="query13" name="query13">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query14">StreamingTV:</label>
+                    <input class="form-control" type="text" id="query14" name="query14">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query15">StreamingMovies:</label>
+                    <input class="form-control" type="text" id="query15" name="query15">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query16">Contract:</label>
+                    <input class="form-control" type="text" id="query16" name="query16">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query17">PaperlessBilling:</label>
+                    <input class="form-control" type="text" id="query17" name="query17">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query18">PaymentMethod:</label>
+                    <input class="form-control" type="text" id="query18" name="query18">
+                </div>
+                <div class="form-group purple-border">
+                    <label for="query19">tenure:</label>
+                    <input class="form-control" type="text" id="query19" name="query19">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9">
+            <textarea class="form-control" rows="2" id="output1" name="output1" cols="5" autofocus>{{output1}}</textarea>
+            <textarea class="form-control" rows="2" id="output2" name="output2" cols="5" autofocus>{{output2}}</textarea>
+        </div>
+    </div>
+</div>
+</body>
+</html>
