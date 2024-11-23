@@ -1,21 +1,65 @@
-                                                     Churn Prediction Analysis
+# Telecom Customer Churn Prediction
 
-Customer churn prediction is vital for businesses to maintain a competitive edge. By identifying which customers are likely to leave, companies can proactively address issues, improving customer satisfaction and retention. Accurate churn analysis helps pinpoint key factors driving customer attrition, allowing businesses to design targeted interventions that reduce churn rates and increase customer lifetime value. This predictive capability enables more efficient resource allocation, focusing efforts on retaining high-risk customers. In the long run, effective churn prediction not only preserves a loyal customer base but also enhances profitability, business sustainability, and overall growth in a competitive market.
+## Overview
+This project focuses on predicting customer churn for a telecom company by leveraging **Exploratory Data Analysis (EDA)** and **Machine Learning Models**. Two distinct approaches were implemented:
+1. **EDA and Feature Engineering**: Understanding the data and deriving meaningful insights to address churn.
+2. **Model Building and Optimization**: Developing predictive models, addressing class imbalance, and improving performance with advanced techniques like SMOTEENN.
 
-Key Findings
-High Predictive Accuracy: Achieved 95% accuracy in predicting customer churn using advanced machine learning techniques.
-Actionable Insights: Decision Trees provided clear insights into key factors driving churn, like contract type and monthly charges.
-Efficiency: PCA reduced data complexity, enhancing computational speed without compromising accuracy.
-Improved Accuracy: Random Forest Classifier aggregated multiple decision trees, boosting prediction accuracy and model robustness.
-Strategic Impact: Machine learning-driven analysis enables proactive customer retention strategies, fostering long-term loyalty and business growth.
-👩🏻‍💻 Skills Showcased
-Machine Learning
-Decision Trees
-PCA
-Random Forest Classifier
-Customer Retention Strategies
+## Key Highlights
+- Implemented comprehensive **EDA** to uncover factors influencing churn.
+- Developed **Decision Tree** and **Random Forest** models to predict churn.
+- Applied **SMOTEENN** to handle class imbalance and improve minority class performance.
+- Achieved a maximum accuracy of **95.2%** with Random Forest after optimization.
+- Visualized customer behavior using plots like KDE, bar charts, and heatmaps.
 
+## Dataset
+The dataset contains customer information from a telecom provider, including:
+- **Demographics**: Gender, senior citizen status.
+- **Services**: Internet service, tech support, and streaming services.
+- **Account Information**: Monthly charges, total charges, payment method.
+- **Target Variable**: `Churn` (1 = Yes, 0 = No).
 
+## Project Workflow
+1. **Data Cleaning**
+   - Converted `TotalCharges` to numeric and handled missing values.
+   - Created new features like `tenure_group` to categorize customer tenure.
+   - Dropped irrelevant columns (`customerID`) to streamline modeling.
 
-I explore a telecommunications dataset to forecast customer churn, a vital aspect of customer relationship management. I employ advanced machine learning techniques like Decision Trees, Principal Component Analysis (PCA), and Random Forest Classifier, achieving an impressive predictive accuracy of 95%. Decision Trees provide intuitive insights into the factors influencing churn behavior, while PCA helps in reducing data dimensionality, enhancing computational efficiency without sacrificing accuracy. Additionally, the Random Forest Classifier improves prediction accuracy by aggregating multiple decision trees. This analysis underscores the critical role of machine learning in proactive churn management within the telecommunications industry, enabling companies to anticipate and address customer attrition effectively. Leveraging these insights, telecom providers can implement targeted retention strategies, optimize customer engagement, and foster long-term customer loyalty and business sustainability.
+2. **EDA**
+   - Visualized key relationships between features and churn using:
+     - **KDE Plots**: Monthly and total charges by churn status.
+     - **Correlation Heatmaps**: To understand feature importance.
+     - **Univariate/Multivariate Plots**: For features like contract type, payment method, and services.
 
+3. **Feature Engineering**
+   - One-hot encoding was applied to categorical variables, resulting in 51 features.
+   - Standardized numerical features for consistency.
+
+4. **Modeling**
+   - Built and evaluated baseline models:
+     - **Decision Tree**: Initial accuracy of **79%**.
+     - **Random Forest**: Slightly better results but struggled with class imbalance.
+
+5. **Model Optimization**
+   - Optimized models post-SMOTEENN:
+     - **Decision Tree**: Accuracy improved to **94%**.
+     - **Random Forest**: Achieved the best results with **95.2% accuracy** and **96% F1-score** for churned customers.
+   - Dimensionality reduction using PCA was tested but did not yield improvements.
+
+6. **Business Insights**
+   - Monthly contract customers churn more than yearly contracts.
+   - Customers without online security or tech support are at higher risk.
+   - Electronic check users have the highest churn rates.
+
+## Results
+| Model                  | Accuracy | Precision | Recall | F1-Score |
+|------------------------|----------|-----------|--------|----------|
+| Decision Tree          | 79.0%    | 65%       | 44%    | 52%      |
+| Decision Tree + SMOTEENN | 94.0%    | 94%       | 95%    | 95%      |
+| Random Forest          | 79.4%    | 68%       | 41%    | 51%      |
+| Random Forest + SMOTEENN | 95.2%    | 94%       | 98%    | 96%      |
+
+## Technologies Used
+- **Programming Languages**: Python
+- **Libraries**: `pandas`, `numpy`, `seaborn`, `matplotlib`, `scikit-learn`, `imbalanced-learn`
+- **Machine Learning Models**: Decision Tree, R
